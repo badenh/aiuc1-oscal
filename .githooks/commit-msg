@@ -1,0 +1,8 @@
+#!/bin/sh
+# Public repo: badenh only. Reject Claude co-authors / session trailers.
+msg_file="$1"
+if grep -iE '^(Co-Authored-By:.*(claude|anthropic)|Claude-Session:)' "$msg_file" >/dev/null; then
+  echo "ERROR: public repo policy — strip Claude Co-Authored-By / Claude-Session trailers." >&2
+  exit 1
+fi
+exit 0

@@ -34,6 +34,16 @@ Withdrawn requirements (E007, E014) carry `status=withdrawn` and `incorporated-i
 
 AIUC-specific props use the namespace `https://aiuc1-oscal.invalid/ns/oscal`, which is a placeholder pending a chosen domain. See the converter README for the full mapping, and for which choices are inference rather than AIUC definitions.
 
+## Contributing
+
+After cloning, enable the tracked git hooks:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+The `commit-msg` hook blocks `Co-Authored-By:` trailers that reference Claude or Anthropic, and any `Claude-Session:` trailer. Commits on this repo must be authored by `badenh` only.
+
 ## Profile usage (example)
 
 Select only the core controls, or only the mandatory requirements, by `prop` in an OSCAL profile or downstream tooling. For example, filter `props[name=control-tier][value=core]`. OSCAL profiles can't select on props natively (only `with-ids` or `matching` patterns), so resolve the ID list first.
