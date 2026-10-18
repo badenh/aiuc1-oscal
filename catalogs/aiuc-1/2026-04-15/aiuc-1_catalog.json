@@ -1,10 +1,10 @@
 {
   "catalog": {
-    "uuid": "45155eff-b241-5c03-b11e-804e3de20f5e",
+    "uuid": "0d8d96d8-8b67-5edc-87a9-f430741cbbe7",
     "metadata": {
       "title": "AIUC-1: AI agent security, safety and reliability standard (unofficial OSCAL conversion)",
       "published": "2026-04-15T00:00:00Z",
-      "last-modified": "2026-10-18T06:10:16Z",
+      "last-modified": "2026-10-18T06:22:15Z",
       "version": "2026-04-15",
       "oscal-version": "1.1.3",
       "props": [
@@ -4021,10 +4021,10 @@
         },
         {
           "uuid": "211dcbea-3b0b-5be3-b474-e61b834ef7b8",
-          "title": "Source snapshot used for this conversion (retrieved 2026-10-18T06:10:16Z)",
+          "title": "Source snapshot used for this conversion (retrieved 2026-10-18T06:22:15Z)",
           "rlinks": [
             {
-              "href": "https://raw.githubusercontent.com/aiunderwriting/AIUC-1-Changelog/f578bfbcbbae92a35824fa7602e886e25692e4c6/standard/requirements.md",
+              "href": "https://raw.githubusercontent.com/aiunderwriting/AIUC-1-Changelog/2948ae0643e26a4a72c23baf5d8219cee255681e/standard/requirements.md",
               "hashes": [
                 {
                   "algorithm": "SHA-256",
@@ -4033,7 +4033,7 @@
               ]
             },
             {
-              "href": "https://raw.githubusercontent.com/aiunderwriting/AIUC-1-Changelog/f578bfbcbbae92a35824fa7602e886e25692e4c6/standard/controls.md",
+              "href": "https://raw.githubusercontent.com/aiunderwriting/AIUC-1-Changelog/2948ae0643e26a4a72c23baf5d8219cee255681e/standard/controls.md",
               "hashes": [
                 {
                   "algorithm": "SHA-256",
