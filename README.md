@@ -6,21 +6,24 @@ This repo holds an OSCAL 1.1.3 catalog of the AIUC-1 AI agent standard, generate
 
 ## Editions
 
-| Edition | Catalog | Source | Requirements | Numbered controls | Activities | Validation |
-|---|---|---|---|---|---|---|
-| 2025-10-15 | [`catalogs/aiuc-1/2025-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2025-10-15/aiuc-1_catalog.json) | GitHub text (reduced) | 51 (51 active, 0 withdrawn) | — | 208 | NIST JSON schema ✓, oscal-cli ✓ |
-| 2026-01-15 | [`catalogs/aiuc-1/2026-01-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-01-15/aiuc-1_catalog.json) | GitHub text (reduced) | 51 (49 active, 2 withdrawn) | — | 172 | NIST JSON schema ✓, oscal-cli ✓ |
-| 2026-04-15 | [`catalogs/aiuc-1/2026-04-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-04-15/aiuc-1_catalog.json) | GitHub text (reduced) | 51 (49 active, 2 withdrawn) | — | 177 | NIST JSON schema ✓, oscal-cli ✓ |
-| 2026-07-15 | [`catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json) | AIUC site | 53 (51 active, 2 withdrawn) | 142 | 184 | NIST JSON schema ✓, oscal-cli ✓ |
-| 2026-10-15 | [`catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json) | AIUC site | 55 (50 active, 5 withdrawn) | 140 | 183 | NIST JSON schema ✓, oscal-cli ✓ |
+| Edition | Catalog | Source | Fidelity | Requirements | Numbered controls | Activities | Props+crosswalks | Validation |
+|---|---|---|---|---|---|---|---|---|
+| 2025-10-15 | [`catalogs/aiuc-1/2025-10-15/github-text/aiuc-1_catalog.json`](catalogs/aiuc-1/2025-10-15/github-text/aiuc-1_catalog.json) | GitHub text | reduced | 51 (51 active, 0 withdrawn) | — | 208 | — | NIST JSON schema ✓, oscal-cli ✓ |
+| 2025-10-15 | [`catalogs/aiuc-1/2025-10-15/wayback/aiuc-1_catalog.json`](catalogs/aiuc-1/2025-10-15/wayback/aiuc-1_catalog.json) | Wayback | half | 49 (49 active, 0 withdrawn) | — | 200 | ✓ (F domain missing) | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-01-15 | [`catalogs/aiuc-1/2026-01-15/github-text/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-01-15/github-text/aiuc-1_catalog.json) | GitHub text | reduced | 51 (49 active, 2 withdrawn) | — | 172 | — | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-01-15 | [`catalogs/aiuc-1/2026-01-15/wayback/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-01-15/wayback/aiuc-1_catalog.json) | Wayback | half | 51 (49 active, 2 withdrawn) | — | 127 | ✓ | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-04-15 | [`catalogs/aiuc-1/2026-04-15/github-text/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-04-15/github-text/aiuc-1_catalog.json) | GitHub text | reduced | 51 (49 active, 2 withdrawn) | — | 177 | — | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-04-15 | [`catalogs/aiuc-1/2026-04-15/wayback/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-04-15/wayback/aiuc-1_catalog.json) | Wayback | half | 51 (49 active, 2 withdrawn) | — | 133 | partial (props only; crosswalk DOM differs) | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-07-15 | [`catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json) | AIUC site | full | 53 (51 active, 2 withdrawn) | 142 | 184 | ✓ | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-10-15 | [`catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json) | AIUC site | full | 55 (50 active, 5 withdrawn) | 140 | 183 | ✓ | NIST JSON schema ✓, oscal-cli ✓ |
 
-**Reduced (GitHub text) catalogs** are built from the independent [`aiunderwriting/AIUC-1-Changelog`](https://github.com/aiunderwriting/AIUC-1-Changelog) repo because AIUC's live site serves only the current edition. These lack numbered control IDs, taxonomy props (application, frequency, requirement-type, capability, keyword, evidence-kind, evidence-category, typical-location), crosswalks, and typical evidence; activities carry only a `control-tier` (core|supplemental) prop and appear directly under each requirement. The reduced-source note is written into each catalog's `metadata/remarks`.
+Three source paths exist because AIUC's live site serves only the current edition:
 
-Each edition directory also contains:
+* **AIUC site** (full fidelity): the current build path, produces numbered controls, all taxonomy props, crosswalks, typical evidence. Used for 2026-07-15 and 2026-10-15.
+* **GitHub text** (reduced): parses [`aiunderwriting/AIUC-1-Changelog`](https://github.com/aiunderwriting/AIUC-1-Changelog) `standard/{requirements,controls}.md` at the release-tagged commit. No props, no crosswalks, no numbered-control IDs — but every activity bullet appears exactly as AIUC published it. Best for diffing text.
+* **Wayback** (half fidelity): parses Internet Archive snapshots of per-requirement pages on the old `aiuc-1.com` domain. Carries requirement props (application, frequency, requirement-type, keywords) and crosswalks where the parser recovers them. The old template did not expose numbered-control IDs or evidence-kind/category/location/capability props. Each catalog records its Wayback snapshot timestamps in `PROVENANCE.md`.
 
-* `PROVENANCE.md`: retrieval time and SHA-256 hash of every source page
-* `reconciliation.md`: check results and source observations
-* `SHA256SUMS`: the catalog hash
+Each catalog directory holds a `PROVENANCE.md`, `reconciliation.md`, and `SHA256SUMS` alongside the catalog JSON. The reduced/half-fidelity source is also recorded in each catalog's `metadata/remarks` and in a `metadata/props` entry (`name=source` → `github-text` | `wayback` | `web`).
 
 ## Structure at a glance
 
