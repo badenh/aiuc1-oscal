@@ -3,7 +3,7 @@
 | Status | Check |
 |---|---|
 | PASS | NIST OSCAL JSON schema (oscal_catalog_schema_1.1.3.json) |
-| WARN | oscal-cli validate (schema + Metaschema constraints) |
+| PASS | oscal-cli validate (schema + Metaschema constraints) |
 | INFO | inventory |
 | PASS | active requirements have >=1 control |
 | PASS | controls have >=1 activity |
@@ -23,9 +23,12 @@
 | PASS | current-edition changelog claims consistent with pages |
 | PASS | internal #references resolve |
 
-## WARN: oscal-cli validate (schema + Metaschema constraints)
+## PASS: oscal-cli validate (schema + Metaschema constraints)
 
-- oscal-cli not found; skipped
+- Validating 'file:/Users/badenh/claudetemp/aiuc1-oscal-builder/converter/out/2026-07-15/aiuc-1_catalog.json' as JSON.
+- The file 'file:/Users/badenh/claudetemp/aiuc1-oscal-builder/converter/out/2026-07-15/aiuc-1_catalog.json' is valid.
+- The operation couldn’t be completed. Unable to locate a Java Runtime.
+- Please visit http://www.java.com for information on installing Java.
 
 ## INFO: inventory
 

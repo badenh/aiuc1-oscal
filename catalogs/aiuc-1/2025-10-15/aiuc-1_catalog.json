@@ -1,0 +1,4541 @@
+{
+  "catalog": {
+    "uuid": "3622e784-82c9-5925-8203-167b74795c39",
+    "metadata": {
+      "title": "AIUC-1: AI agent security, safety and reliability standard (unofficial OSCAL conversion)",
+      "published": "2025-10-15T00:00:00Z",
+      "last-modified": "2026-10-18T06:12:25Z",
+      "version": "2025-10-15",
+      "oscal-version": "1.1.3",
+      "props": [
+        {
+          "name": "edition",
+          "value": "2025-10-15",
+          "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+        },
+        {
+          "name": "distribution",
+          "value": "private-unofficial",
+          "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+        },
+        {
+          "name": "source",
+          "value": "github-text",
+          "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://standard.aiuc-1.com",
+          "rel": "canonical"
+        }
+      ],
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Document Creator"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "4395e708-fda1-53cf-aa3f-0b6db5b5c213",
+          "type": "organization",
+          "name": "Artificial Intelligence Underwriting Company",
+          "short-name": "AIUC",
+          "links": [
+            {
+              "href": "https://www.aiuc-1.com",
+              "rel": "website"
+            }
+          ]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "creator",
+          "party-uuids": [
+            "4395e708-fda1-53cf-aa3f-0b6db5b5c213"
+          ]
+        }
+      ],
+      "remarks": "UNOFFICIAL, PRIVATE DERIVATIVE. Machine conversion of the AIUC-1 standard as published at https://standard.aiuc-1.com. AIUC-1 content is (c) Artificial Intelligence Underwriting Company, all rights reserved, and is subject to the AIUC Terms of Use; this catalog is not endorsed by AIUC and must not be redistributed without AIUC's permission. The AIUC web edition is authoritative; where this catalog differs, the web edition prevails.\n\nReduced catalog built from the AIUC-1-Changelog GitHub repository (https://github.com/aiunderwriting/AIUC-1-Changelog). The GitHub text source lacks numbered control IDs, taxonomy props (application, frequency, requirement-type, capability, keyword, evidence-kind, evidence-category, typical-location), crosswalks to other frameworks, and typical evidence prose. Activities are emitted directly under the requirement with a control-tier prop (core|supplemental). The AIUC web edition is authoritative."
+    },
+    "groups": [
+      {
+        "id": "a",
+        "class": "domain",
+        "title": "A",
+        "props": [
+          {
+            "name": "label",
+            "value": "A"
+          }
+        ],
+        "controls": [
+          {
+            "id": "a001",
+            "class": "requirement",
+            "title": "Establish input data policy",
+            "props": [
+              {
+                "name": "label",
+                "value": "A001"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a001_smt",
+                "name": "statement",
+                "prose": "Establish and communicate AI input data policies covering how customer data is used for model training, inference processing, data retention periods, and customer data rights",
+                "parts": [
+                  {
+                    "id": "a001_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining input data usage policies. For example, opt-in/opt-out mechanisms, disclosure requirements, boundaries between training and post-deployment data usage."
+                  },
+                  {
+                    "id": "a001_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing data retention and deletion procedures for inputs. For example, defining retention periods for training data, inference logs, and customer-submitted content, plus technical approaches for removal such as selective unlearning."
+                  },
+                  {
+                    "id": "a001_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting and justifying retention periods for different categories of input data."
+                  },
+                  {
+                    "id": "a001_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting processes for customer data subject rights. For example, handling requests for access, portability, or deletion of input data, and maintaining records of which datasets were used to train specific models."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "a002",
+            "class": "requirement",
+            "title": "Establish output data policy",
+            "props": [
+              {
+                "name": "label",
+                "value": "A002"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a002_smt",
+                "name": "statement",
+                "prose": "Establish AI output ownership, usage, opt-out and deletion policies to customers and communicate these policies",
+                "parts": [
+                  {
+                    "id": "a002_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining output ownership rights with clear distinctions between customer inputs and AI outputs. For example, specifying customer versus vendor ownership of AI-generated content, usage permissions for different output types."
+                  },
+                  {
+                    "id": "a002_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Disclosing consent and opt-out procedures for outputs. For example, documenting how consent for re-use of AI-generated content is collected, what opt-out limitations exist, and how customers can control or revoke permissions."
+                  },
+                  {
+                    "id": "a002_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing output usage policies communicated through accessible terms of service. For example, permitted uses of AI-generated content, restrictions on redistribution or commercial use, policies on derivative and transformative use."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "a003",
+            "class": "requirement",
+            "title": "Limit AI agent data collection",
+            "props": [
+              {
+                "name": "label",
+                "value": "A003"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a003_smt",
+                "name": "statement",
+                "prose": "Implement safeguards to limit AI agent data access to task-relevant information based on user roles and context",
+                "parts": [
+                  {
+                    "id": "a003_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Configuring data collection limits to reduce data and privacy exposure. For example, limiting to time-bounded, task-specific, purpose-limited contextual data, implementing scoping actions based on agent-assigned objectives, session type, or workflow stage, and avoiding persistent or out-of-scope information requests."
+                  },
+                  {
+                    "id": "a003_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Deploying monitoring and enforcement mechanisms. For example, ensuring AI systems only perform necessary inference and logging deviations from defined operational scope."
+                  },
+                  {
+                    "id": "a003_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating with existing identity and access management (IAM) systems to align agent access permissions with organizational policies. For example, oAuth."
+                  },
+                  {
+                    "id": "a003_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing dynamic context-based restrictions to adjust access decisions if user role or environment changes during agent session. For example, task-based access controls, contextual capability restrictions, automatic privilege limiting."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "a004",
+            "class": "requirement",
+            "title": "Protect IP & trade secrets",
+            "props": [
+              {
+                "name": "label",
+                "value": "A004"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a004_smt",
+                "name": "statement",
+                "prose": "Implement safeguards or technical controls to prevent AI systems from leaking company intellectual property or confidential information",
+                "parts": [
+                  {
+                    "id": "a004_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting foundation model provider safeguards which may serve as primary IP protection. For example, reviewing contractual data handling terms, assessing model retention and fine-tuning behaviors, verifying confidentiality commitments, and identifying any limitations or gaps against organizational IP protection criteria."
+                  },
+                  {
+                    "id": "a004_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing supplementary data access controls where provider protections are insufficient. For example, limiting AI exposure to proprietary information, restricting training on internal documents, and applying differentiated controls for open-source versus proprietary assets."
+                  },
+                  {
+                    "id": "a004_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing output monitoring procedures with automated review processes for high-risk scenarios. For example, scanning responses for proprietary code or business information, flagging internal data disclosures."
+                  },
+                  {
+                    "id": "a004_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining internal IP incident response and escalation procedures as part of AI failure plan on data breaches. For example, documenting incidents and containment actions, specifying clear escalation timelines and responsible parties based on severity."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "a005",
+            "class": "requirement",
+            "title": "Prevent cross-customer data exposure",
+            "props": [
+              {
+                "name": "label",
+                "value": "A005"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a005_smt",
+                "name": "statement",
+                "prose": "Implement safeguards to prevent cross-customer data exposure when combining customer data from multiple sources",
+                "parts": [
+                  {
+                    "id": "a005_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing explicit consent and disclosure for combined data usage. For example, informing customers when their data will be combined with competitor data, disclosing data anonymization and abstraction policies, providing opt-out mechanisms."
+                  },
+                  {
+                    "id": "a005_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing customer data isolation controls. For example, enforcing strict logical and physical separation of customer data, applying tenant-specific encryption, validating data flow boundaries in shared infrastructure, establishing technical barriers between customer datasets during training."
+                  },
+                  {
+                    "id": "a005_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing specific privacy-enhancing technologies (PETs) to reduce competitive exposure. For example, applying differential privacy to obfuscate customer contributions, using federated learning to avoid centralizing raw data."
+                  },
+                  {
+                    "id": "a005_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing inference-time data isolation to prevent leakage of one customer's data or model-derived insights into responses for other customers. For example, enforcing tenant-aware routing, access control at inference, and prompt context segregation."
+                  },
+                  {
+                    "id": "a005_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Adapting safeguards to industry-specific competitive risks. For example, applying stricter isolation for customers in the same vertical, avoiding cross-training on data from direct competitors, or honoring industry codes of conduct and regulatory expectations around data co-mingling."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "a006",
+            "class": "requirement",
+            "title": "Prevent PII leakage",
+            "props": [
+              {
+                "name": "label",
+                "value": "A006"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a006_smt",
+                "name": "statement",
+                "prose": "Establish safeguards to prevent personal data leakage through AI outputs",
+                "parts": [
+                  {
+                    "id": "a006_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing data segregation controls. For example, isolating user sessions, implementing user-specific boundaries, preventing reuse of prompts or outputs containing personal identifiers, maintaining dataset isolation."
+                  },
+                  {
+                    "id": "a006_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing safeguards to prevent personal data leakage between users. For example, isolating user sessions, applying user-specific output boundaries, and preventing reuse of prompts or outputs containing personal identifiers."
+                  },
+                  {
+                    "id": "a006_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting protection procedures and incident management. For example, identifying PII, defining output handling policies, maintaining leakage incident records and remediation actions."
+                  },
+                  {
+                    "id": "a006_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing output monitoring. For example, scanning outputs for cross-customer data leakage, validating data source attribution."
+                  },
+                  {
+                    "id": "a006_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing automated detection and redaction of personal data in AI outputs. For example, using named entity recognition (NER) or data classification tools to scan and remove PII before output is delivered to end users."
+                  },
+                  {
+                    "id": "a006_smt.f",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "f."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating with existing data loss prevention (DLP) systems to monitor and block outputs containing personal data in violation of policy."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "a007",
+            "class": "requirement",
+            "title": "Prevent IP violations",
+            "props": [
+              {
+                "name": "label",
+                "value": "A007"
+              }
+            ],
+            "parts": [
+              {
+                "id": "a007_smt",
+                "name": "statement",
+                "prose": "Implement safeguards and technical controls to prevent AI outputs from violating copyrights, trademarks, or other third-party intellectual property rights",
+                "parts": [
+                  {
+                    "id": "a007_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting foundation model provider IP protections which may serve as primary infringement safeguards. For example, reviewing copyright and trademark handling, assessing indemnification coverage, and identifying known limitations, exclusions, or risk thresholds relevant to organizational context."
+                  },
+                  {
+                    "id": "a007_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing supplementary content filtering mechanisms where provider protections have gaps or limitations. For example, detecting copyrighted material in outputs, implementing trademark screening."
+                  },
+                  {
+                    "id": "a007_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing user guidance and guardrails to reduce IP risk. For example, providing usage policies that explain prohibited content types, embedding warnings or UI notices for high-risk prompts, restricting output generation in known infringement domains."
+                  },
+                  {
+                    "id": "a007_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining third-party IP incident response procedures. For example, identifying potential infringement, documenting incidents and remediation actions, coordinating with provider protections."
+                  },
+                  {
+                    "id": "a007_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing restrictions in AI acceptable use policy."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "class": "domain",
+        "title": "B",
+        "props": [
+          {
+            "name": "label",
+            "value": "B"
+          }
+        ],
+        "controls": [
+          {
+            "id": "b001",
+            "class": "requirement",
+            "title": "Third-party testing of adversarial robustness",
+            "props": [
+              {
+                "name": "label",
+                "value": "B001"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b001_smt",
+                "name": "statement",
+                "prose": "Implement adversarial testing program to validate system resilience against adversarial inputs and prompt injection attempts in line with adversarial threat taxonomy",
+                "parts": [
+                  {
+                    "id": "b001_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing a taxonomy for adversarial risks. For example, referencing and tailoring relevant categories from NIST's AI 100-2e2023 attack classifications (chapters 2.1 and 3.1) such as evasion, poisoning, privacy attacks, and model manipulation, and aligning these to system architecture and use cases."
+                  },
+                  {
+                    "id": "b001_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting comprehensive adversarial testing quarterly and after material system changes. For example, performing structured red-teaming, prompt injection assessments, jailbreaking attempts, adversarial perturbation testing, semantic manipulation, and simulated malicious tool invocations using defined attack trees or scenario templates."
+                  },
+                  {
+                    "id": "b001_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining secure testing documentation. For example, recording test cases, methods, outcomes, and system behaviors with restricted access controls, implementing secure storage for sensitive testing materials."
+                  },
+                  {
+                    "id": "b001_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing improvement processes based on findings. For example, assigning owners and remediation timelines based on test severity (e.g. critical within 30 days), tracking fixes through risk registers or issue management systems, documenting updates to safeguards and procedures."
+                  },
+                  {
+                    "id": "b001_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Aligning adversarial testing with broader security testing programs. For example, integrating AI-specific test cases into penetration testing, sharing threat models across red/blue teams, aligning test cycles with security audit and compliance calendars."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b002",
+            "class": "requirement",
+            "title": "Detect adversarial input",
+            "props": [
+              {
+                "name": "label",
+                "value": "B002"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b002_smt",
+                "name": "statement",
+                "prose": "Implement monitoring capabilities to detect and respond to adversarial inputs and prompt injection attempts",
+                "parts": [
+                  {
+                    "id": "b002_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing detection and alerting. For example, implementing monitoring for prompt injection patterns, jailbreak techniques, adversarial input attempts, and exceeding rate limits, configuring alerts and threat notifications for suspicious activities."
+                  },
+                  {
+                    "id": "b002_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing incident logging and response procedures. For example, logging suspected attacks with timestamps, user/session context, and input content, escalating to designated personnel based on severity thresholds (e.g. immediate escalation for confirmed jailbreaks), documenting response actions in a centralized incident system."
+                  },
+                  {
+                    "id": "b002_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining detection effectiveness through quarterly reviews. For example, updating detection rules based on emerging adversarial techniques, analyzing incident patterns and documenting system improvements."
+                  },
+                  {
+                    "id": "b002_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing adversarial input detection prior to AI model processing where feasible. For example, using lightweight pattern-matching, behavioral heuristics, or IP-based filters to flag likely threats before processing, with latency-optimized safeguards or asynchronous review paths where real-time detection is infeasible."
+                  },
+                  {
+                    "id": "b002_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating adversarial input detection into existing security operations tooling. For example, forwarding flagged inputs to SIEM platforms, correlating detection with authentication and network logs, enabling SOC teams to triage AI-related security events."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b003",
+            "class": "requirement",
+            "title": "Manage public release of technical details",
+            "props": [
+              {
+                "name": "label",
+                "value": "B003"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b003_smt",
+                "name": "statement",
+                "prose": "Implement controls to prevent over-disclosure of technical information about AI systems and organizational details that could enable adversarial targeting",
+                "parts": [
+                  {
+                    "id": "b003_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting limitations on technical information release. For example, limiting public disclosure of model architectures, algorithms, training data details, system configurations, and performance metrics, requiring approval before sharing technical specifications or implementation details."
+                  },
+                  {
+                    "id": "b003_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Controlling organizational information to balance transparency with security. For example, limiting disclosure of AI team details, development timelines, and other information that could reveal technical capabilities, reviewing public communications for sensitive information."
+                  },
+                  {
+                    "id": "b003_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing approval processes. For example, requiring designated review for public content referencing AI capabilities in e.g. publications, presentations, and marketing materials, and documenting approved disclosures with business justification."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b004",
+            "class": "requirement",
+            "title": "Prevent AI endpoint scraping",
+            "props": [
+              {
+                "name": "label",
+                "value": "B004"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b004_smt",
+                "name": "statement",
+                "prose": "Implement safeguards to prevent probing or scraping of external AI endpoints",
+                "parts": [
+                  {
+                    "id": "b004_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing systems distinguishing between high-volume legitimate usage and adversarial behavior. For example, using behavioral analytics, session history, user role, and customer tier to calibrate thresholds and prevent false positives against known trusted users."
+                  },
+                  {
+                    "id": "b004_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing rate limiting and query restrictions. For example, establishing per-user query quotas and rate limits to prevent model extraction attempts, configuring automated blocking of excessive query patterns, implementing progressive restrictions for suspicious usage behavior, implementing pseudo limits such as significant price-per-query increases over a set quota."
+                  },
+                  {
+                    "id": "b004_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting simulated external attack testing. For example, performing automated scraping tests, brute force attempts, and reconnaissance activities against AI endpoints, testing rate limiting effectiveness against high-volume query attacks and distributed attacks, documenting test methodologies and scope appropriate to organizational threat profile."
+                  },
+                  {
+                    "id": "b004_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining endpoint security through remediation. For example, documenting test results and identified vulnerabilities, implementing protective measures and updating endpoint defenses based on testing outcomes, regularly reviewing and adjusting rate limiting thresholds based on attack patterns."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b005",
+            "class": "requirement",
+            "title": "Implement real-time input filtering",
+            "props": [
+              {
+                "name": "label",
+                "value": "B005"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b005_smt",
+                "name": "statement",
+                "prose": "Implement real-time input filtering using automated moderation tools",
+                "parts": [
+                  {
+                    "id": "b005_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating automated moderation tools to scan user inputs for violations of content policies such as violence, hate, or self-harm. For example, integrating OpenAI’s Moderation API, configuring Claude for content moderation, implementing moderation tools from e.g. VirtueAI/Hive/Spectrum Labs, developing custom filters, or a combination."
+                  },
+                  {
+                    "id": "b005_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Blocking, redirecting, or modifying flagged inputs before they reach the foundation model."
+                  },
+                  {
+                    "id": "b005_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing confidence thresholds or rules for when to block, warn, log, or allow inputs based on risk category and severity."
+                  },
+                  {
+                    "id": "b005_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting the moderation logic and thresholds used, including rationale for chosen tool(s)."
+                  },
+                  {
+                    "id": "b005_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Providing feedback to users when inputs are blocked."
+                  },
+                  {
+                    "id": "b005_smt.f",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "f."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Logging flagged prompts for analysis and refinement of filters, while ensuring compliance with privacy obligations. For example, excluding identifying metadata, applying retention limits, and documenting user-facing disclosures or consent mechanisms if required."
+                  },
+                  {
+                    "id": "b005_smt.g",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "g."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Periodically evaluating filter performance and adjusting thresholds accordingly. For example, accuracy, latency, false positives/negatives."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b006",
+            "class": "requirement",
+            "title": "Limit AI agent system access",
+            "props": [
+              {
+                "name": "label",
+                "value": "B006"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b006_smt",
+                "name": "statement",
+                "prose": "Implement safeguards to limit AI agent system access based on context and declared objectives",
+                "parts": [
+                  {
+                    "id": "b006_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Configuring contextual access controls for AI agents. For example, enforcing task-based tool access using declarative policy models (e.g. JSON policy schemas or role-capability matrices), scoping actions based on agent-assigned objectives, session type, or workflow stage."
+                  },
+                  {
+                    "id": "b006_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing privilege limiting for autonomous behavior. For example, restricting agents from escalating access or acting beyond permitted functions."
+                  },
+                  {
+                    "id": "b006_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Deploying monitoring and enforcement mechanisms. For example, ensuring AI systems only perform necessary inference and logging deviations from defined operational scope."
+                  },
+                  {
+                    "id": "b006_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining automatic restriction triggers. For example, revoking tool access or suppressing outputs when agent context diverges from declared task scope, user role constraints are violated, or anomalous behavior (e.g. lateral tool access or excessive data usage) is detected in real time."
+                  },
+                  {
+                    "id": "b006_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating agent access decisions with existing identity and access management (IAM) systems. For example, aligning agent privileges with user roles, enforcing access through API gateways or policy engines, and logging agent actions alongside traditional user activity."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b007",
+            "class": "requirement",
+            "title": "Enforce user access privileges to AI systems",
+            "props": [
+              {
+                "name": "label",
+                "value": "B007"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b007_smt",
+                "name": "statement",
+                "prose": "Establish and maintain user access controls and admin privileges for AI systems in line with policy",
+                "parts": [
+                  {
+                    "id": "b007_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing system-level access controls tailored to AI systems. For example, using role-based or attribute-based access to restrict access to model configuration, training datasets, tool-calling capabilities, or prompt logs, based on job function and system sensitivity."
+                  },
+                  {
+                    "id": "b007_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Restricting administrative and configuration privileges to authorized personnel. For example, limiting ability to alter system behavior, tools, or models."
+                  },
+                  {
+                    "id": "b007_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting access reviews and updates at least quarterly. For example, validating access assignments, updating based on policy or role changes,  documenting access changes with AI-specific context (e.g. model access justification, changes to agent capability boundaries, or access to sensitive prompt/response history)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b008",
+            "class": "requirement",
+            "title": "Protect model deployment environment",
+            "props": [
+              {
+                "name": "label",
+                "value": "B008"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b008_smt",
+                "name": "statement",
+                "prose": "Implement security measures for AI model deployment environments including encryption, access controls and authorization",
+                "parts": [
+                  {
+                    "id": "b008_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing model access protection. For example, restricting access to production AI models based on job function and operational need, implementing MFA for model system access, maintaining user access reviews appropriate to organizational size."
+                  },
+                  {
+                    "id": "b008_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing deployment security controls. For example, applying scoped API tokens or signed requests, using TLS for all endpoint traffic, implementing schema validation to protect model APIs from malformed or adversarial input."
+                  },
+                  {
+                    "id": "b008_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Securing model hosting environments. For example, using up-to-date and minimal container images, scanning for known vulnerabilities in dependencies and base images, and applying infrastructure-level isolation techniques based on risk level (e.g. container namespaces, VM separation, or dedicated GPU access)."
+                  },
+                  {
+                    "id": "b008_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Verifying model integrity before and during deployment. For example, using cryptographic checksums or signed artifacts to detect tampering, scanning model files for malicious payloads (e.g. in Pickle or ONNX formats), and logging model version hashes at deployment time."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b009",
+            "class": "requirement",
+            "title": "Limit output over-exposure",
+            "props": [
+              {
+                "name": "label",
+                "value": "B009"
+              }
+            ],
+            "parts": [
+              {
+                "id": "b009_smt",
+                "name": "statement",
+                "prose": "Implement output limitations and obfuscation techniques to safeguard against information leakage",
+                "parts": [
+                  {
+                    "id": "b009_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reducing or limiting the number of results shown in outputs to relevant only to balance security and utility. For example, character limits, limits on inference time."
+                  },
+                  {
+                    "id": "b009_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Filtering sensitive information that may reveal internal system behavior. For example, removing or abstracting technical details about model architecture, prompt structure, or tool invocation logic."
+                  },
+                  {
+                    "id": "b009_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Providing user-facing notices or documentation about output limitations. For example, clearly indicating when results have been truncated, rounded, or suppressed to align with security and privacy safeguards."
+                  },
+                  {
+                    "id": "b009_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Limiting the fidelity of numerical outputs in certain use cases. For example, applying output rounding, threshold bands, or obfuscation techniques to reduce the risk of model inversion or precision-sensitive data disclosure."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c",
+        "class": "domain",
+        "title": "C",
+        "props": [
+          {
+            "name": "label",
+            "value": "C"
+          }
+        ],
+        "controls": [
+          {
+            "id": "c001",
+            "class": "requirement",
+            "title": "Define AI risk taxonomy",
+            "props": [
+              {
+                "name": "label",
+                "value": "C001"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c001_smt",
+                "name": "statement",
+                "prose": "Establish a risk taxonomy that categorizes risks within harmful, out-of-scope, and hallucinated outputs, tool calls, and other risks based on application-specific usage",
+                "parts": [
+                  {
+                    "id": "c001_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining risk categories with severity levels and examples based on industry and deployment context. For example, classifying harmful outputs such as distressed outputs, angry responses, high-risk advice, offensive content, bias, and deception, identifying other high-risk use cases such as safety-critical instructions, legal recommendations, financial advice."
+                  },
+                  {
+                    "id": "c001_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Aligning risk taxonomy with external frameworks and standards. For example, NIST AI RMF functions, EU AI Act article 9, ISO42001 controls."
+                  },
+                  {
+                    "id": "c001_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing severity grading appropriate to organizational context and risk tolerance. For example, implementing consistent scoring methodology across risk categories, defining thresholds for flagging and human review."
+                  },
+                  {
+                    "id": "c001_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining taxonomy currency with documented change management. For example, reviewing and updating risk categories quarterly or when new threat patterns emerge, adjusting risk thresholds, incorporating lessons from incident response and industry benchmarks."
+                  },
+                  {
+                    "id": "c001_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Identifying additional risk categories that are considered harmful given nature of operations. For example, hallucinations, out-of-scope content."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c002",
+            "class": "requirement",
+            "title": "Conduct pre-deployment testing",
+            "props": [
+              {
+                "name": "label",
+                "value": "C002"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c002_smt",
+                "name": "statement",
+                "prose": "Conduct internal testing of AI systems prior to deployment across risk categories (including high-risk, harmful, hallucinated, and out-of-scope outputs and tool calls) for system changes requiring formal review or approval",
+                "parts": [
+                  {
+                    "id": "c002_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting pre-deployment testing with documented results and identified issues. For example, structured hallucination testing, adversarial prompting, safety unit tests, and scenario-based walkthroughs."
+                  },
+                  {
+                    "id": "c002_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Completing risk assessments of identified issues before system deployment. For example, potential impact analysis, mitigation strategies, and residual risk evaluation."
+                  },
+                  {
+                    "id": "c002_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Obtaining approval sign-offs from designated accountable leads with documented rationale for approval decisions and maintained records for review purposes."
+                  },
+                  {
+                    "id": "c002_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating AI system testing into established software development lifecycle (SDLC) gates. For example, requiring risk evaluation and sign-off at staging or pre-production milestones, aligning with CI/CD or MLOps pipelines, and documenting test artifacts in shared repositories."
+                  },
+                  {
+                    "id": "c002_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing pre-deployment vulnerability scanning of AI artifacts and dependencies. For example, scanning model files (e.g. pickle, ONNX) for malicious code or unsafe deserialization, checking runtime behavior for unbounded tool execution or insecure API access, validating ML libraries and infrastructure for known CVEs, and analyzing downstream outputs for unsafe content or behaviors."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c003",
+            "class": "requirement",
+            "title": "Prevent harmful outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "C003"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c003_smt",
+                "name": "statement",
+                "prose": "Implement safeguards or technical controls to prevent harmful outputs including distressed outputs, angry responses, high-risk advice, offensive content, bias, and deception",
+                "parts": [
+                  {
+                    "id": "c003_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing content filtering for harmful output types. For example, detecting and blocking distressed responses, angry language, offensive content, biased statements, and deceptive information."
+                  },
+                  {
+                    "id": "c003_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing safety guardrails for advice generation. For example, restricting high-risk recommendations in sensitive domains, requiring disclaimers for guidance."
+                  },
+                  {
+                    "id": "c003_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining bias detection and mitigation controls. For example, monitoring for discriminatory patterns, implementing fairness checks in outputs."
+                  },
+                  {
+                    "id": "c003_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Evaluating harm mitigation controls using performance metrics. For example, tracking false positives (overblocking safe content) and false negatives (missed harmful content), measuring coverage of flagged scenarios, and benchmarking against known harm datasets like ToxiGen."
+                  },
+                  {
+                    "id": "c003_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing review and appeal mechanisms. For example, allowing flagged outputs to be escalated for manual review, recording override decisions with justification, incorporating feedback into harm detection refinement."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c004",
+            "class": "requirement",
+            "title": "Prevent out-of-scope outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "C004"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c004_smt",
+                "name": "statement",
+                "prose": "Implement safeguards or technical controls to prevent out-of-scope outputs (e.g. political discussion, healthcare advice)",
+                "parts": [
+                  {
+                    "id": "c004_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing topic boundary enforcement. For example, detecting and redirecting conversations outside intended use cases as defined in AI acceptable use policy, blocking prohibited discussion areas such as political topics or out-of-scope advice."
+                  },
+                  {
+                    "id": "c004_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing scope violation response procedures. For example, automated redirection messages, escalation for persistent attempts."
+                  },
+                  {
+                    "id": "c004_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining scope monitoring and adjustment capabilities. For example, tracking boundary violations, updating restrictions based on emerging issues."
+                  },
+                  {
+                    "id": "c004_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing user education on system scope and limitations. For example, displaying onboarding tooltips, publishing usage guidelines or FAQs, embedding in-context hints to clarify intended capabilities, highlighting unsupported domains to reduce misuse."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c005",
+            "class": "requirement",
+            "title": "Prevent customer-defined high risk outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "C005"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c005_smt",
+                "name": "statement",
+                "prose": "Implement safeguards or technical controls to prevent additional high risk outputs as defined in risk taxonomy",
+                "parts": [
+                  {
+                    "id": "c005_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing detection and blocking mechanisms aligned with organizational risk taxonomy. For example, deploying filtering based on defined risk categories and severity thresholds."
+                  },
+                  {
+                    "id": "c005_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining risk-based response controls. For example, flagging and blocking mechanisms, logging for monitoring purposes."
+                  },
+                  {
+                    "id": "c005_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing escalation procedures for flagged high risk content. For example, human review workflows, approval requirements for edge cases, planning reviewer capacity based on expected flagging volume and response time objectives."
+                  },
+                  {
+                    "id": "c005_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing automated real-time response mechanisms. For example, triggering dynamic warnings, blocking or modifying model responses based on severity thresholds, routing flagged interactions for further processing or audit without user delay."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c006",
+            "class": "requirement",
+            "title": "Prevent output vulnerabilities",
+            "props": [
+              {
+                "name": "label",
+                "value": "C006"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c006_smt",
+                "name": "statement",
+                "prose": "Implement safeguards to prevent security vulnerabilities in outputs from impacting users",
+                "parts": [
+                  {
+                    "id": "c006_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing output sanitization and validation procedures before presenting content to users. For example, stripping or encoding HTML, JavaScript, shell syntax, and iframe content, blocking or rewriting unsafe URLs, validating structured output schemas (e.g. JSON/YAML/XML) against whitelists, enforcing safe rendering modes (e.g. text-only, content-security-policy (CSP) headers)."
+                  },
+                  {
+                    "id": "c006_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing safety-specific labeling and handling protocols. For example, clearly marking untrusted, distinguishing untrusted third-party data, applying appropriate security controls based on content source and risk level."
+                  },
+                  {
+                    "id": "c006_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining detection and monitoring capabilities. For example, logging sanitization activities, implementing alerting for suspicious content patterns."
+                  },
+                  {
+                    "id": "c006_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Detecting advanced output-based attack patterns. For example, identifying prompt injection chains, model-output subversion (e.g. jailbreak tokens), payloads targeting downstream applications (e.g. command-line instructions, SQL queries), or obfuscated exploits designed to bypass basic filters."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c007",
+            "class": "requirement",
+            "title": "Flag high risk recommendations",
+            "props": [
+              {
+                "name": "label",
+                "value": "C007"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c007_smt",
+                "name": "statement",
+                "prose": "Implement an alerting system that flags high-risk recommendations for human review",
+                "parts": [
+                  {
+                    "id": "c007_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining high-risk recommendation criteria drawing on risk taxonomy. For example, financial advice exceeding company thresholds, medical or health-related guidance, legal recommendations, safety-critical instructions, and content that could cause reputational harm."
+                  },
+                  {
+                    "id": "c007_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing automated detection using keyword filtering, confidence scoring, or rule-based assessment with adjustable sensitivity settings."
+                  },
+                  {
+                    "id": "c007_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing human review workflows. For example, designated reviewers from available staff, escalation procedures for complex cases, queue management for pending reviews with response time tracking against SLA, documentation of review decisions."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c008",
+            "class": "requirement",
+            "title": "Monitor AI risk categories",
+            "props": [
+              {
+                "name": "label",
+                "value": "C008"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c008_smt",
+                "name": "statement",
+                "prose": "Implement monitoring of AI systems across risk categories",
+                "parts": [
+                  {
+                    "id": "c008_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing proactive detection. For example, defining potential scenarios based on risk taxonomy that could generate harmful outputs under normal or adversarial use, documenting risk scenarios to guide test planning and operational safeguards, deploying automated detection tools (e.g. classifiers, heuristics, anomaly detectors)."
+                  },
+                  {
+                    "id": "c008_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing ongoing monitoring. For example, conducting regular evaluations prioritized by risk severity, using methods such as output sampling, behavior tracing, and prompt-response logging."
+                  },
+                  {
+                    "id": "c008_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining documentation. For example, recording identified scenarios with clear examples, updating risk taxonomy based on monitoring findings and incidents."
+                  },
+                  {
+                    "id": "c008_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Integrating AI output monitoring with existing security tools. For example, forwarding alerts and flagged outputs to SIEM platforms, applying standard logging formats (e.g. JSON, syslog) to support automated threat detection workflows."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c009",
+            "class": "requirement",
+            "title": "Enable real-time feedback and intervention",
+            "props": [
+              {
+                "name": "label",
+                "value": "C009"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c009_smt",
+                "name": "statement",
+                "prose": "Implement mechanisms to enable real-time user feedback collection and intervention mechanisms",
+                "parts": [
+                  {
+                    "id": "c009_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing on-screen communication systems. For example, implementing real-time display of system status, intervention notices, disclaimers, and risk alerts during interactions, ensuring messages are context-sensitive and clearly visible."
+                  },
+                  {
+                    "id": "c009_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Enabling user intervention capabilities. For example, providing mechanisms for users to pause, stop, or redirect system behavior, implementing feedback collection tools for users to report issues or concerns, ensuring technical controls persist across devices and interaction contexts."
+                  },
+                  {
+                    "id": "c009_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Ensuring accessibility of feedback and intervention mechanisms. For example, adhering to WCAG 2.1 standards for color contrast, screen reader compatibility, keyboard navigation, and clear messaging for users with disabilities."
+                  },
+                  {
+                    "id": "c009_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reviewing user feedback and intervention logs regularly. For example, evaluating patterns in interventions, adapting communication methods based on user needs and emerging risk considerations."
+                  },
+                  {
+                    "id": "c009_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Analyzing collected feedback using structured methodologies. For example, categorizing by risk domain, prioritizing based on frequency and severity,  routing high-impact or repeat issues into product backlog or compliance workflows."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c010",
+            "class": "requirement",
+            "title": "Third-party testing for harmful outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "C010"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c010_smt",
+                "name": "statement",
+                "prose": "Appoint expert third parties to evaluate system robustness to harmful outputs including distressed outputs, angry responses, high-risk advice, offensive content, bias, and deception at least every 3 months",
+                "parts": [
+                  {
+                    "id": "c010_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Appointing qualified third-party assessors. For example, selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence."
+                  },
+                  {
+                    "id": "c010_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting regular testing. For example, performing assessments of harmful outputs at least every quarter, defining testing scope and methodologies based on risk classifications and industry benchmarks like ToxiGen, coordinating with internal security and testing teams."
+                  },
+                  {
+                    "id": "c010_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining documentation. For example, recording third-party qualifications, testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c011",
+            "class": "requirement",
+            "title": "Third-party testing for out-of-scope outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "C011"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c011_smt",
+                "name": "statement",
+                "prose": "Appoint expert third parties to evaluate system robustness to out-of-scope outputs at least every 3 months (e.g. political discussion, healthcare advice)",
+                "parts": [
+                  {
+                    "id": "c011_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Appointing qualified third-party assessors. For example, selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence."
+                  },
+                  {
+                    "id": "c011_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting regular testing. For example, performing assessments of out-of-scope outputs at least every quarter, defining testing scope and methodologies based on risk taxonomy."
+                  },
+                  {
+                    "id": "c011_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining documentation. For example, recording third-party qualifications, testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "c012",
+            "class": "requirement",
+            "title": "Third-party testing for customer-defined risk",
+            "props": [
+              {
+                "name": "label",
+                "value": "C012"
+              }
+            ],
+            "parts": [
+              {
+                "id": "c012_smt",
+                "name": "statement",
+                "prose": "Appoint expert third-parties to evaluate system robustness to additional high-risk outputs as defined in risk taxonomy at least every 3 months",
+                "parts": [
+                  {
+                    "id": "c012_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Appointing qualified third-party assessors. For example, selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence."
+                  },
+                  {
+                    "id": "c012_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting regular testing. For example, performing assessments of high-risk areas at least every quarter, defining testing scope and methodologies based on risk taxonomy."
+                  },
+                  {
+                    "id": "c012_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining documentation. For example, recording third-party qualifications, testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "d",
+        "class": "domain",
+        "title": "D",
+        "props": [
+          {
+            "name": "label",
+            "value": "D"
+          }
+        ],
+        "controls": [
+          {
+            "id": "d001",
+            "class": "requirement",
+            "title": "Prevent hallucinated outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "D001"
+              }
+            ],
+            "parts": [
+              {
+                "id": "d001_smt",
+                "name": "statement",
+                "prose": "Implement safeguards or technical controls to prevent hallucinated outputs",
+                "parts": [
+                  {
+                    "id": "d001_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing factual accuracy controls. For example, deploying available fact-checking mechanisms, flagging uncertain or low-confidence responses."
+                  },
+                  {
+                    "id": "d001_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing information source validation. For example, requiring citations for factual claims, implementing source reliability checks."
+                  },
+                  {
+                    "id": "d001_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining uncertainty communication. For example, displaying confidence levels, providing appropriate disclaimers for generated information."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "d002",
+            "class": "requirement",
+            "title": "Third-party testing for hallucinations",
+            "props": [
+              {
+                "name": "label",
+                "value": "D002"
+              }
+            ],
+            "parts": [
+              {
+                "id": "d002_smt",
+                "name": "statement",
+                "prose": "Appoint expert third-parties to evaluate hallucinated outputs at least every 3 months",
+                "parts": [
+                  {
+                    "id": "d002_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Appointing qualified third-party assessors. For example, selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence."
+                  },
+                  {
+                    "id": "d002_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting regular testing. For example, performing assessments of hallucinated outputs at least every quarter, defining testing scope and methodologies based on risk classifications."
+                  },
+                  {
+                    "id": "d002_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining documentation. For example, recording third-party qualifications, testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "d003",
+            "class": "requirement",
+            "title": "Restrict unsafe tool calls",
+            "props": [
+              {
+                "name": "label",
+                "value": "D003"
+              }
+            ],
+            "parts": [
+              {
+                "id": "d003_smt",
+                "name": "statement",
+                "prose": "Implement safeguards or technical controls to prevent tool calls in AI systems from executing unauthorized actions, accessing restricted information, or making decisions beyond their intended scope",
+                "parts": [
+                  {
+                    "id": "d003_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing function call validation and authorization. For example, restricting tool access to approved functions, validating parameters before execution."
+                  },
+                  {
+                    "id": "d003_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Enforcing rate limits and transaction caps for autonomous tool use."
+                  },
+                  {
+                    "id": "d003_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing execution monitoring and logging. For example, tracking all tool calls, monitoring for unauthorized access attempts or scope violations."
+                  },
+                  {
+                    "id": "d003_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining decision boundary enforcement. For example, limiting autonomous actions to defined parameters, requiring human approval for sensitive operations."
+                  },
+                  {
+                    "id": "d003_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reviewing patterns of AI tool usage for anomalies, updating tool permissions, and retiring unused or high-risk functions during scheduled evaluations."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "d004",
+            "class": "requirement",
+            "title": "Third-party testing of tool calls",
+            "props": [
+              {
+                "name": "label",
+                "value": "D004"
+              }
+            ],
+            "parts": [
+              {
+                "id": "d004_smt",
+                "name": "statement",
+                "prose": "Appoint expert third-parties to evaluate tool calls in AI systems, including executing unauthorized actions, accessing restricted information, or making decisions beyond their intended scope at least every 3 months",
+                "parts": [
+                  {
+                    "id": "d004_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Appointing qualified third-party assessors. For example, selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence."
+                  },
+                  {
+                    "id": "d004_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting regular testing. For example, performing assessments of tool calls at least every quarter, defining testing scope and methodologies based on risk classifications."
+                  },
+                  {
+                    "id": "d004_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining documentation. For example, recording third-party qualifications, testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "e",
+        "class": "domain",
+        "title": "E",
+        "props": [
+          {
+            "name": "label",
+            "value": "E"
+          }
+        ],
+        "controls": [
+          {
+            "id": "e001",
+            "class": "requirement",
+            "title": "AI failure plan for security breaches",
+            "props": [
+              {
+                "name": "label",
+                "value": "E001"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e001_smt",
+                "name": "statement",
+                "prose": "Document AI failure plan for AI privacy and security breaches assigning accountable owners and establishing notification and remediation with third-party support as needed (e.g. legal, PR, insurers)",
+                "parts": [
+                  {
+                    "id": "e001_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Assigning a breach response lead from existing staff. For example, IT manager, security officer, or designated executive with authority to engage external counsel and specialists as needed."
+                  },
+                  {
+                    "id": "e001_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining breach notification procedures. For example, customer communications, regulatory reporting requirements, and vendor notifications based on applicable privacy laws."
+                  },
+                  {
+                    "id": "e001_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing security remediation measures. For example, system freeze capabilities, vulnerability fixes, access control updates, and coordination with external security consultants when internal expertise is insufficient."
+                  },
+                  {
+                    "id": "e001_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing evidence collection requirements with guidance on preserving evidence for potential legal review. For example, system logs, user activity records, and basic documentation."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e002",
+            "class": "requirement",
+            "title": "AI failure plan for harmful outputs",
+            "props": [
+              {
+                "name": "label",
+                "value": "E002"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e002_smt",
+                "name": "statement",
+                "prose": "Document AI failure plan for harmful AI outputs that cause significant customer harm assigning accountable owners and establishing remediation with third-party support as needed (e.g. legal, PR, insurers)",
+                "parts": [
+                  {
+                    "id": "e002_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing customer communication protocols. For example, disclosure procedures, explanation of corrective actions, and follow-up commitments with executive approval for significant incidents."
+                  },
+                  {
+                    "id": "e002_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing immediate mitigation steps with designated staff responsibilities. For example, system freeze capabilities, output suppression, customer notification, and system adjustments."
+                  },
+                  {
+                    "id": "e002_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining harmful output categories with reference to risk taxonomy. For example, discriminatory content, offensive material, inappropriate recommendations, ideally with concrete examples."
+                  },
+                  {
+                    "id": "e002_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Coordinating external support engagement. For example,  legal counsel consultation, PR support, and insurance claim procedures."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e003",
+            "class": "requirement",
+            "title": "AI failure plan for hallucinations",
+            "props": [
+              {
+                "name": "label",
+                "value": "E003"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e003_smt",
+                "name": "statement",
+                "prose": "Document AI failure plan for hallucinated AI outputs that cause substantial customer financial loss assigning accountable owners and establishing remediation with third-party support as needed (e.g. legal, PR, insurers)",
+                "parts": [
+                  {
+                    "id": "e003_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing compensation assessment procedures. For example, loss evaluation methods, settlement approaches, and payment authorization levels with appropriate approval requirements."
+                  },
+                  {
+                    "id": "e003_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing remediation measures. For example, system freeze capabilities, model adjustments, output validation improvements, customer notification, and enhanced monitoring."
+                  },
+                  {
+                    "id": "e003_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining hallucination incident types. For example,  factual errors or incorrect recommendations relevant to company context and customer base."
+                  },
+                  {
+                    "id": "e003_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Coordinating potential external support. For example, legal consultation for significant claims, financial review when needed, and insurance coverage activation."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e004",
+            "class": "requirement",
+            "title": "Assign accountability",
+            "props": [
+              {
+                "name": "label",
+                "value": "E004"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e004_smt",
+                "name": "statement",
+                "prose": "Document which AI system changes across the development & deployment lifecycle require formal review or approval, assign a lead accountable for each, and document their approval with supporting evidence",
+                "parts": [
+                  {
+                    "id": "e004_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining AI system changes requiring approval including model selection, material changes to the meta prompt, adding / removing guardrails, changes to end-user workflow, other changes that drive material. For example, +/-10% performance on evals."
+                  },
+                  {
+                    "id": "e004_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Assigning an accountable lead as approver for each of these changes. Can follow a RACI structure to formalize roles of those consulted and informed."
+                  },
+                  {
+                    "id": "e004_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing code signing and verification processes for AI models, libraries, and deployment artefacts to ensure only digitally signed components are approved for production use."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e005",
+            "class": "requirement",
+            "title": "Assess cloud vs on-prem processing",
+            "props": [
+              {
+                "name": "label",
+                "value": "E005"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e005_smt",
+                "name": "statement",
+                "prose": "Establish criteria for selecting cloud provider, and circumstances for on-premises processing considering data sensitivity, regulatory requirements, security controls, and operational needs",
+                "parts": [
+                  {
+                    "id": "e005_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting deployment risk assessments. For example, evaluating data sensitivity, regulatory compliance requirements, IP protection needs, and security controls for cloud vs. on-premises AI processing."
+                  },
+                  {
+                    "id": "e005_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting decision criteria and rationale. For example, establishing clear selection factors, maintaining records of deployment choices with business justification."
+                  },
+                  {
+                    "id": "e005_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing deployment-appropriate security controls. For example, configuring cloud-specific protections or on-premises security measures based on selected deployment model."
+                  },
+                  {
+                    "id": "e005_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing hybrid deployment strategies. For example, using on-premises for sensitive data, cloud for less sensitive workloads, with secure data flow controls."
+                  },
+                  {
+                    "id": "e005_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing cloud vendor management procedures. For example, conducting provider due diligence, implementing contractual protections for data sovereignty and IP."
+                  },
+                  {
+                    "id": "e005_smt.f",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "f."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reviewing deployment decisions when requirements change. For example, reassessing choices when data sensitivity, regulations, or threat landscape evolves."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e006",
+            "class": "requirement",
+            "title": "Conduct vendor due diligence",
+            "props": [
+              {
+                "name": "label",
+                "value": "E006"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e006_smt",
+                "name": "statement",
+                "prose": "Establish AI vendor due diligence processes for foundation and upstream model providers covering data handling, PII controls, security and compliance",
+                "parts": [
+                  {
+                    "id": "e006_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining assessment criteria for foundational or upstream AI models. For example, data handling practices, PII controls, security measures, compliance status, open-source."
+                  },
+                  {
+                    "id": "e006_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting documented assessments. For example, scoring results, verification activities such as certifications reviewed and references contacted, and approval decisions. Can follow a RACI structure."
+                  },
+                  {
+                    "id": "e006_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining assessment records with sufficient detail for audit purposes and retaining due diligence evidence before vendor approval."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e007",
+            "class": "requirement",
+            "title": "Document system change approvals",
+            "props": [
+              {
+                "name": "label",
+                "value": "E007"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e007_smt",
+                "name": "statement",
+                "prose": "Define approval processes for material changes to AI systems (e.g. model versions, access controls, data sources) requiring formal review and sign-off",
+                "parts": [
+                  {
+                    "id": "e007_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting formal review and approval decisions for changes defined in E004: Assign accountability."
+                  },
+                  {
+                    "id": "e007_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting the approval workflow with sufficient detail for review purposes. For example, who approved the change, what evidence was reviewed, timestamp of approval."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e008",
+            "class": "requirement",
+            "title": "Review internal processes",
+            "props": [
+              {
+                "name": "label",
+                "value": "E008"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e008_smt",
+                "name": "statement",
+                "prose": "Establish regular internal reviews of key processes and document review records and approvals",
+                "parts": [
+                  {
+                    "id": "e008_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reviewing decision processes every quarter including AI system changes, foundational model selection, security assessment."
+                  },
+                  {
+                    "id": "e008_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining a centralized repository of decision records and internal review of these record. For example, supporting evidence reviewed, remediation plans."
+                  },
+                  {
+                    "id": "e008_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting and tracking remediation of any risks identified."
+                  },
+                  {
+                    "id": "e008_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Collecting and implementing external feedback on AI systems. For example, system risks, new threat patterns, new mitigation strategies."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e009",
+            "class": "requirement",
+            "title": "Monitor third-party access",
+            "props": [
+              {
+                "name": "label",
+                "value": "E009"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e009_smt",
+                "name": "statement",
+                "prose": "Implement systems to monitor third party access",
+                "parts": [
+                  {
+                    "id": "e009_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining third-party interaction scope with logging of access attempts and activities. For example, API connections, user access sessions, data exchanges, and service integrations."
+                  },
+                  {
+                    "id": "e009_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Capturing access metadata. For example, user identification, authentication timestamps, accessed resources, session duration, origin IP addresses, and resource usage patterns."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e010",
+            "class": "requirement",
+            "title": "Establish AI acceptable use policy",
+            "props": [
+              {
+                "name": "label",
+                "value": "E010"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e010_smt",
+                "name": "statement",
+                "prose": "Establish and implement an AI acceptable use policy",
+                "parts": [
+                  {
+                    "id": "e010_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining prohibited AI usage. For example, jailbreak attempts, malicious prompt injection, unauthorized data extraction, generation of harmful content, and misuse of customer data ideally with specific examples."
+                  },
+                  {
+                    "id": "e010_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing detection and monitoring tools. For example, prompt analysis, output filtering, usage pattern anomalies, and suspicious access attempts."
+                  },
+                  {
+                    "id": "e010_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing user feedback when policy is breached. For example, showing alerts or error messages when inputs violate acceptable use."
+                  },
+                  {
+                    "id": "e010_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Real-time monitoring, blocking, or alerting capabilities."
+                  },
+                  {
+                    "id": "e010_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining logging and tracking systems. For example, incident creation, violation tracking with case assignment and resolution documentation."
+                  },
+                  {
+                    "id": "e010_smt.f",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "f."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Conducting regular effectiveness reviews. For example, quarterly analysis of violation trends, tool performance assessment, policy updates based on emerging threats, and user training adjustments."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e011",
+            "class": "requirement",
+            "title": "Record processing locations",
+            "props": [
+              {
+                "name": "label",
+                "value": "E011"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e011_smt",
+                "name": "statement",
+                "prose": "Document AI data processing locations",
+                "parts": [
+                  {
+                    "id": "e011_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining AI infrastructure location documentation. For example, geographic locations of foundation model processing locations and inference endpoint regions, documenting third-party AI service provider data handling locations."
+                  },
+                  {
+                    "id": "e011_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reviewing and updating documentation regularly."
+                  },
+                  {
+                    "id": "e011_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing transfer compliance procedures. For example, assessing data transfer requirements for AI training data and inference processing, maintaining approved transfer mechanisms for foundation model providers and AI infrastructure, mitigating transfer risk for cross-border AI model training."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e012",
+            "class": "requirement",
+            "title": "Document regulatory compliance",
+            "props": [
+              {
+                "name": "label",
+                "value": "E012"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e012_smt",
+                "name": "statement",
+                "prose": "Document applicable AI laws and standards, required data protections, and strategies for compliance",
+                "parts": [
+                  {
+                    "id": "e012_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Identifying relevant regulations. For example, data protection laws. For example, GDPR, CCPA, sector-specific requirements, emerging AI standards. For example, EU AI Act."
+                  },
+                  {
+                    "id": "e012_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting compliance procedures and strategies appropriate for company size and operations."
+                  },
+                  {
+                    "id": "e012_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Reviewing the repository every 6 months and when additional requirements may be triggered. For example, regulations change or business operations expand into new jurisdictions."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e013",
+            "class": "requirement",
+            "title": "Implement quality management system",
+            "props": [
+              {
+                "name": "label",
+                "value": "E013"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e013_smt",
+                "name": "statement",
+                "prose": "Establish a quality management system for AI systems proportionate to the size of the organization",
+                "parts": [
+                  {
+                    "id": "e013_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting strategy for compliance with conformity assessment procedures."
+                  },
+                  {
+                    "id": "e013_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting techniques, procedures and systematic actions to be used for the design, design control and design verification of the AI system."
+                  },
+                  {
+                    "id": "e013_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting techniques, procedures and systematic actions to be used for the development, quality control and quality assurance of the AI system."
+                  },
+                  {
+                    "id": "e013_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting the handling of communication with national competent authorities, other relevant authorities, including those providing or supporting the access to data, notified bodies, other operators, customers or other interested parties."
+                  },
+                  {
+                    "id": "e013_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting resource management, including security-of-supply related measures."
+                  },
+                  {
+                    "id": "e013_smt.f",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "f."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Assigning and documenting accountability in the organisation for each of the aspects in the quality management system."
+                  },
+                  {
+                    "id": "e013_smt.g",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "g."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Collecting comprehensive documentation for EU AI Act Article 17 requirements for quality management systems. For example, strategy for regulatory compliance, examination, test and validation procedures, technical specifications and fulfillment, data management procedures, risk management, post-market monitoring, incident reporting, and record-keeping."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e014",
+            "class": "requirement",
+            "title": "Share transparency reports",
+            "props": [
+              {
+                "name": "label",
+                "value": "E014"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e014_smt",
+                "name": "statement",
+                "prose": "Establish policies for sharing transparency reports with relevant stakeholders including regulators and customers",
+                "parts": [
+                  {
+                    "id": "e014_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Defining report scope and recipient categories with clear criteria for when reports must be shared. For example, regulators, customers, and other stakeholders."
+                  },
+                  {
+                    "id": "e014_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Excluding or sanitizing technical documentation and other sensitive information that could be used for adversarial attacks."
+                  },
+                  {
+                    "id": "e014_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing secure delivery methods with appropriate authentication and access control. For example,  dataroom access, encrypted transmission, controlled access portals."
+                  },
+                  {
+                    "id": "e014_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Documenting sharing procedures including approval workflows, version control, and audit trails for transparency."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e015",
+            "class": "requirement",
+            "title": "Log model activity",
+            "props": [
+              {
+                "name": "label",
+                "value": "E015"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e015_smt",
+                "name": "statement",
+                "prose": "Maintain logs of AI system processes, actions, and model outputs where permitted to support incident investigation, auditing, and explanation of AI system behavior",
+                "parts": [
+                  {
+                    "id": "e015_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Capturing system activity details. For example, input parameters, processing steps, model outputs, and user interactions."
+                  },
+                  {
+                    "id": "e015_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing log storage with appropriate retention periods and access controls to support auditing and incident response."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e016",
+            "class": "requirement",
+            "title": "Implement AI disclosure mechanisms",
+            "props": [
+              {
+                "name": "label",
+                "value": "E016"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e016_smt",
+                "name": "statement",
+                "prose": "Implement clear disclosure mechanisms to inform users when they are interacting with AI systems rather than human operators",
+                "parts": [
+                  {
+                    "id": "e016_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing clear AI interaction disclosure at the beginning of communications, notifying users they are interacting with artificial intelligence, not humans."
+                  },
+                  {
+                    "id": "e016_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Ensuring disclosures are conspicuous and easily understood. For example, using prominent placement and plain language appropriate for the communication medium."
+                  },
+                  {
+                    "id": "e016_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining disclosure visibility throughout extended interactions. For example, providing ongoing indication of AI involvement in conversations or sessions."
+                  },
+                  {
+                    "id": "e016_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Labelling AI generated audio, image and video in a machine-readable format and detectable as artificially generated or manipulated. For example, Content Credentials."
+                  },
+                  {
+                    "id": "e016_smt.e",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "e."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Informing users if they are exposed to emotion recognition or biometric categorisation systems."
+                  },
+                  {
+                    "id": "e016_smt.f",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "f."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing adaptive disclosure methods for different interaction types. For example, visual indicators for text, audio notifications for voice communications."
+                  },
+                  {
+                    "id": "e016_smt.g",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "g."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing reactive disclosure capabilities when users ask if they are interacting with AI."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "e017",
+            "class": "requirement",
+            "title": "Document system transparency policy",
+            "props": [
+              {
+                "name": "label",
+                "value": "E017"
+              }
+            ],
+            "parts": [
+              {
+                "id": "e017_smt",
+                "name": "statement",
+                "prose": "Establish a system transparency policy and maintain a repository of model cards, datasheets, and interpretability reports for major systems",
+                "parts": [
+                  {
+                    "id": "e017_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing a transparency policy defining requirements for documentation of major AI systems. For example, model capabilities, limitations, and intended use cases."
+                  },
+                  {
+                    "id": "e017_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Maintaining a centralized repository of system documentation with appropriate access controls for internal stakeholders. For example, model cards, datasheets, and interpretability reports."
+                  },
+                  {
+                    "id": "e017_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing updates to documentation when systems are modified or new information becomes available about model performance or risks."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "f",
+        "class": "domain",
+        "title": "F",
+        "props": [
+          {
+            "name": "label",
+            "value": "F"
+          }
+        ],
+        "controls": [
+          {
+            "id": "f001",
+            "class": "requirement",
+            "title": "Prevent AI cyber misuse",
+            "props": [
+              {
+                "name": "label",
+                "value": "F001"
+              }
+            ],
+            "parts": [
+              {
+                "id": "f001_smt",
+                "name": "statement",
+                "prose": "Implement or document guardrails to prevent AI-enabled misuse for cyber attacks and exploitation",
+                "parts": [
+                  {
+                    "id": "f001_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Results of testing from foundation model developer on offensive cyber capabilities and mitigations."
+                  },
+                  {
+                    "id": "f001_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Attestation the mitigations have not been removed."
+                  },
+                  {
+                    "id": "f001_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Implementing malicious use detection and blocking. For example, deploying available content filtering to detect requests for malicious code generation, attack planning, and vulnerability exploitation guidance, configuring automated blocking of cyber attack assistance requests, maintaining databases of prohibited use patterns."
+                  },
+                  {
+                    "id": "f001_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing usage monitoring and threat intelligence. For example, monitoring AI system usage for exploitation attempts and suspicious patterns, maintaining updated threat intelligence on AI misuse techniques, implementing alerting for detected malicious use attempts."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "f002",
+            "class": "requirement",
+            "title": "Prevent catastrophic misuse",
+            "props": [
+              {
+                "name": "label",
+                "value": "F002"
+              }
+            ],
+            "parts": [
+              {
+                "id": "f002_smt",
+                "name": "statement",
+                "prose": "Implement or document guardrails to prevent AI-enabled catastrophic system misuse (chemical / bio / radio / nuclear)",
+                "parts": [
+                  {
+                    "id": "f002_smt.a",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "a."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Results of testing from foundation model developer on CBRN capabilities and mitigations."
+                  },
+                  {
+                    "id": "f002_smt.b",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "b."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "core",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Attestation that the mitigations have not been removed."
+                  },
+                  {
+                    "id": "f002_smt.c",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "c."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Relevant evaluations. For example, Center for AI Safety's Weapons of Mass Destruction proxy benchmark."
+                  },
+                  {
+                    "id": "f002_smt.d",
+                    "name": "item",
+                    "props": [
+                      {
+                        "name": "label",
+                        "value": "d."
+                      },
+                      {
+                        "name": "control-tier",
+                        "value": "supplemental",
+                        "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+                      }
+                    ],
+                    "prose": "Establishing catastrophic misuse monitoring. For example, monitoring AI system interactions for patterns indicating weapons development or mass harm intent, implementing real-time alerting for detected catastrophic misuse attempts, documenting suspicious queries and system responses."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "fc420bef-bb43-591a-bc4e-bd25bf365412",
+          "title": "AIUC-1 standard (web edition)",
+          "rlinks": [
+            {
+              "href": "https://standard.aiuc-1.com"
+            }
+          ]
+        },
+        {
+          "uuid": "7571c6f0-abe0-57ef-895f-4df14602c5c5",
+          "title": "AIUC-1 changelog",
+          "rlinks": [
+            {
+              "href": "https://standard.aiuc-1.com/changelog"
+            },
+            {
+              "href": "https://github.com/aiunderwriting/AIUC-1-Changelog"
+            }
+          ]
+        },
+        {
+          "uuid": "1a0a1142-5068-5692-a5e7-97039f9c11b7",
+          "title": "Source snapshot used for this conversion (retrieved 2026-10-18T06:12:25Z)",
+          "rlinks": [
+            {
+              "href": "https://raw.githubusercontent.com/aiunderwriting/AIUC-1-Changelog/736d027651c049512b32b1fb922f329b90a464bd/standard/requirements.md",
+              "hashes": [
+                {
+                  "algorithm": "SHA-256",
+                  "value": "509b792f3e42f8dc45fe6731912e4c5f65fc24874a374db9b774f3315fddc186"
+                }
+              ]
+            },
+            {
+              "href": "https://raw.githubusercontent.com/aiunderwriting/AIUC-1-Changelog/736d027651c049512b32b1fb922f329b90a464bd/standard/controls.md",
+              "hashes": [
+                {
+                  "algorithm": "SHA-256",
+                  "value": "852af182380b34aa57941746800655825a98e484d5244f985be52897a6f00c29"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

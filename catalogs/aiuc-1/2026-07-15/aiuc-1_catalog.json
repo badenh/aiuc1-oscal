@@ -1,6 +1,6 @@
 {
   "catalog": {
-    "uuid": "0397548a-f1a1-5150-a605-2a2df510a9a8",
+    "uuid": "ed8c2dd2-532a-5691-8818-882ec7de34a2",
     "metadata": {
       "title": "AIUC-1: AI agent security, safety and reliability standard (unofficial OSCAL conversion)",
       "published": "2026-07-15T00:00:00Z",
@@ -16,6 +16,11 @@
         {
           "name": "distribution",
           "value": "private-unofficial",
+          "ns": "https://aiuc1-oscal.invalid/ns/oscal"
+        },
+        {
+          "name": "source",
+          "value": "web",
           "ns": "https://aiuc1-oscal.invalid/ns/oscal"
         }
       ],
@@ -64,13 +69,6 @@
           {
             "name": "label",
             "value": "A"
-          }
-        ],
-        "links": [
-          {
-            "href": "https://standard.aiuc-1.com/data-and-privacy",
-            "rel": "reference",
-            "text": "AIUC-1 web page"
           }
         ],
         "controls": [
@@ -3503,6 +3501,13 @@
               }
             ]
           }
+        ],
+        "links": [
+          {
+            "href": "https://standard.aiuc-1.com/data-and-privacy",
+            "rel": "reference",
+            "text": "AIUC-1 web page"
+          }
         ]
       },
       {
@@ -3513,13 +3518,6 @@
           {
             "name": "label",
             "value": "B"
-          }
-        ],
-        "links": [
-          {
-            "href": "https://standard.aiuc-1.com/security",
-            "rel": "reference",
-            "text": "AIUC-1 web page"
           }
         ],
         "controls": [
@@ -9236,6 +9234,13 @@
               }
             ]
           }
+        ],
+        "links": [
+          {
+            "href": "https://standard.aiuc-1.com/security",
+            "rel": "reference",
+            "text": "AIUC-1 web page"
+          }
         ]
       },
       {
@@ -9246,13 +9251,6 @@
           {
             "name": "label",
             "value": "C"
-          }
-        ],
-        "links": [
-          {
-            "href": "https://standard.aiuc-1.com/safety",
-            "rel": "reference",
-            "text": "AIUC-1 web page"
           }
         ],
         "controls": [
@@ -14462,6 +14460,13 @@
               }
             ]
           }
+        ],
+        "links": [
+          {
+            "href": "https://standard.aiuc-1.com/safety",
+            "rel": "reference",
+            "text": "AIUC-1 web page"
+          }
         ]
       },
       {
@@ -14472,13 +14477,6 @@
           {
             "name": "label",
             "value": "D"
-          }
-        ],
-        "links": [
-          {
-            "href": "https://standard.aiuc-1.com/reliability",
-            "rel": "reference",
-            "text": "AIUC-1 web page"
           }
         ],
         "controls": [
@@ -16299,6 +16297,13 @@
               }
             ]
           }
+        ],
+        "links": [
+          {
+            "href": "https://standard.aiuc-1.com/reliability",
+            "rel": "reference",
+            "text": "AIUC-1 web page"
+          }
         ]
       },
       {
@@ -16309,13 +16314,6 @@
           {
             "name": "label",
             "value": "E"
-          }
-        ],
-        "links": [
-          {
-            "href": "https://standard.aiuc-1.com/accountability",
-            "rel": "reference",
-            "text": "AIUC-1 web page"
           }
         ],
         "controls": [
@@ -23363,6 +23361,13 @@
               }
             ]
           }
+        ],
+        "links": [
+          {
+            "href": "https://standard.aiuc-1.com/accountability",
+            "rel": "reference",
+            "text": "AIUC-1 web page"
+          }
         ]
       },
       {
@@ -23373,13 +23378,6 @@
           {
             "name": "label",
             "value": "F"
-          }
-        ],
-        "links": [
-          {
-            "href": "https://standard.aiuc-1.com/society",
-            "rel": "reference",
-            "text": "AIUC-1 web page"
           }
         ],
         "controls": [
@@ -24110,6 +24108,13 @@
                 ]
               }
             ]
+          }
+        ],
+        "links": [
+          {
+            "href": "https://standard.aiuc-1.com/society",
+            "rel": "reference",
+            "text": "AIUC-1 web page"
           }
         ]
       }

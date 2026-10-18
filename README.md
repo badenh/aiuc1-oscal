@@ -6,10 +6,15 @@ This repo holds an OSCAL 1.1.3 catalog of the AIUC-1 AI agent standard, generate
 
 ## Editions
 
-| Edition | Catalog | Requirements | Numbered controls | Activities | Validation |
-|---|---|---|---|---|---|
-| 2026-07-15 | [`catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json) | 53 (51 active, 2 withdrawn) | 142 | 184 | NIST JSON schema ✓, oscal-cli ✓ |
-| 2026-10-15 | [`catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json) | 55 (50 active, 5 withdrawn) | 140 | 183 | NIST JSON schema ✓, oscal-cli ✓ |
+| Edition | Catalog | Source | Requirements | Numbered controls | Activities | Validation |
+|---|---|---|---|---|---|---|
+| 2025-10-15 | [`catalogs/aiuc-1/2025-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2025-10-15/aiuc-1_catalog.json) | GitHub text (reduced) | 51 (51 active, 0 withdrawn) | — | 208 | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-01-15 | [`catalogs/aiuc-1/2026-01-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-01-15/aiuc-1_catalog.json) | GitHub text (reduced) | 51 (49 active, 2 withdrawn) | — | 172 | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-04-15 | [`catalogs/aiuc-1/2026-04-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-04-15/aiuc-1_catalog.json) | GitHub text (reduced) | 51 (49 active, 2 withdrawn) | — | 177 | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-07-15 | [`catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json) | AIUC site | 53 (51 active, 2 withdrawn) | 142 | 184 | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-10-15 | [`catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json) | AIUC site | 55 (50 active, 5 withdrawn) | 140 | 183 | NIST JSON schema ✓, oscal-cli ✓ |
+
+**Reduced (GitHub text) catalogs** are built from the independent [`aiunderwriting/AIUC-1-Changelog`](https://github.com/aiunderwriting/AIUC-1-Changelog) repo because AIUC's live site serves only the current edition. These lack numbered control IDs, taxonomy props (application, frequency, requirement-type, capability, keyword, evidence-kind, evidence-category, typical-location), crosswalks, and typical evidence; activities carry only a `control-tier` (core|supplemental) prop and appear directly under each requirement. The reduced-source note is written into each catalog's `metadata/remarks`.
 
 Each edition directory also contains:
 
