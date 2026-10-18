@@ -9,6 +9,7 @@ This repo holds an OSCAL 1.1.3 catalog of the AIUC-1 AI agent standard, generate
 | Edition | Catalog | Requirements | Numbered controls | Activities | Validation |
 |---|---|---|---|---|---|
 | 2026-07-15 | [`catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-07-15/aiuc-1_catalog.json) | 53 (51 active, 2 withdrawn) | 142 | 184 | NIST JSON schema ✓, oscal-cli ✓ |
+| 2026-10-15 | [`catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json`](catalogs/aiuc-1/2026-10-15/aiuc-1_catalog.json) | 55 (50 active, 5 withdrawn) | 140 | 183 | NIST JSON schema ✓, oscal-cli ✓ |
 
 Each edition directory also contains:
 
